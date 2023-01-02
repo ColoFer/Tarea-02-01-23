@@ -1,0 +1,132 @@
+:root{
+    --colorPrincipal: #EB4F38;
+    --colorBase: #F3F0F0;
+}
+
+.icono{
+    color: var(--colorPrincipal);
+    font-size: 25px;
+}
+/*BODY*/
+body{
+    background-color: var(--colorBase) ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*HEADER*/
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav>a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+a>button{
+    background-color: #F3F0F0;
+    color: black;
+    font-size: 20px;
+    padding: 0.4rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+/*MAIN*/
+.titulo>h1{
+    text-transform: uppercase;
+    font-size: 60px;
+    line-height: 30%;
+}
+.titulo>h3{
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.icono_text{
+    color: var(--colorPrincipal);
+    font-size: 50px;
+}
+.tachado{
+    text-decoration: line-through;
+}
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.imagen>.icono_img{
+    position: relative;
+    z-index: -1;
+    color: var(--colorPrincipal);
+    font-size: 550px;
+    transform: rotate(90deg);
+   
+}
+.imagen>img{
+    z-index: 1;
+    position: absolute;
+    height: 670px;
+}
+.boton_negro> button{
+    background-color:black;
+    color: white;
+    font-size: 20px;
+    padding: 0.4rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+.barra{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    text-transform: uppercase;
+    text-align: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transform: rotate(-1.5deg);
+    margin: -10px;
+    padding: -10px;
+    word-spacing: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.hamburguesa{
+    color: black;
+    display: none;
+    cursor: pointer;
+    font-size: 50px;
+    padding: 20px;
+}
+/*REPONSIVE*/
+@media(max-width: 1200px){
+    nav,.iconos{
+        display: none;
+    }
+    .hamburguesa{
+        display: block;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .barra{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
